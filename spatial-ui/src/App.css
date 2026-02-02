@@ -1,0 +1,85 @@
+html, body, #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    max-width: none; /* poistaa Vite-template rajoituksen */
+}
+
+body {
+    overflow: hidden; /* est‰‰ ìturhan scrollinî + v‰lkkymisen */
+}
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Pysyv‰ yl‰palkki */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    z-index: 1000;
+    background: white;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+/* Kartta t‰ytt‰‰ kaiken muun tilan yl‰palkin alapuolella */
+.map-wrapper {
+    position: absolute;
+    top: 56px; /* sama kuin topbarin height */
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.leaflet-legend {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.15);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
